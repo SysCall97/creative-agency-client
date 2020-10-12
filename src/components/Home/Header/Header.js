@@ -4,10 +4,10 @@ import Navbar from '../Navbar/Navbar';
 
 const Header = () => {
     return (
-        <div className="mr-0" style={{backgroundColor:"#FBD062", borderBottomRightRadius:"30%"}}>
+        <section className="mr-0" style={{backgroundColor:"#FBD062", borderBottomRightRadius:"30%"}}>
             <Navbar />
             <HeaderMain />
-        </div>
+        </section>
     );
 };
 

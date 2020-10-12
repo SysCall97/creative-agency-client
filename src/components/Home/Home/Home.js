@@ -1,4 +1,5 @@
 import React from 'react';
+import Customer from '../Customer/Customer';
 import Header from '../Header/Header';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     return (
         <div>
             <Header />
+            <Customer />
         </div>
     );
 };

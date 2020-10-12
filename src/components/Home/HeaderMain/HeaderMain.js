@@ -3,9 +3,9 @@ import frame from '../../../images/logos/Frame.png';
 
 const HeaderMain = () => {
     return (
-        <section className="row mt-4 pb-5 mw-100">
+        <section className="row mt-4 pb-5 mw-100 mb-5">
             <div className="col-md-4 ml-5 d-flex flex-column align-items-start justify-content-center">
-                <h1 className="text-brand">
+                <h1 className="text-brand text-highlight">
                     Let’s Grow Your Brand To The Next Level
                 </h1>
 

@@ -1,3 +1,7 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .btn-brand{
   background-color: #111430;
   color: #fff;
@@ -9,4 +13,8 @@
 
 .text-brand{
   color: #111430;
+}
+
+.text-highlight{
+  font-weight: 800;
 }
