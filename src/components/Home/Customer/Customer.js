@@ -7,7 +7,7 @@ import airbnb from '../../../images/logos/airbnb.png';
 
 const Customer = () => {
     return (
-        <section className="row mw-100 mt-4 d-flex justify-content-center align-items-center">
+        <section className="row mw-75 mr-4 ml-4 mt-4 mb-4 pt-4 pb-4 d-flex justify-content-center align-items-center">
             <div className="col-md-2 col-sm-2"><img src={google} className="img-fluid" alt="" width="70%" /></div>
             <div className="col-md-2 col-sm-2"><img src={netflix} className="img-fluid" alt="" width="70%" /></div>
             <div className="col-md-2 col-sm-2"><img src={slack} className="img-fluid" alt="" width="70%" /></div>
