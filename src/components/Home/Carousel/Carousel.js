@@ -6,7 +6,7 @@ import carousel3 from '../../../images/carousel-3.png';
 
 const Carousel = () => {
     return (
-        <div id="carouselExampleIndicators" className="carousel slide slides" data-ride="carousel">
+        <div id="carouselExampleIndicators" className="carousel slide slides" data-ride="carousel" data-interval="2000">
             <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>

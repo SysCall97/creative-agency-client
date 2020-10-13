@@ -32,3 +32,7 @@ body{
 .carousel-indicators li, .carousel-indicators li.active {
   margin: 0 7px !important;
 }
+
+.carousel-indicators li.active {
+  background-color: #FBD062;
+}
