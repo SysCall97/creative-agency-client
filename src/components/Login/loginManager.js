@@ -24,9 +24,11 @@ export const googleSignIn = () => {
 
   return firebase.auth().signInWithPopup(provider)
     .then(res => {
+      console.log(res.user);
       const newUser = {
         displayName: res.user.displayName,
         email: res.user.email,
+        photoURL: res.user.photoURL,
         isLoggedIn: true,
         error: ""
       }

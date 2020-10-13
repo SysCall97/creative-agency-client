@@ -4,10 +4,10 @@ const Footer = () => {
     return (
         <section className="mw-100 mt-4 mb-0 pt-4 pb-2" style={{backgroundColor:"#FBD062"}}>
         <div className="row mw-100">
-            <div className="col-md-5 ml-5 mb-5 d-flex flex-column align-items-start justify-content-center">
-                <h1 className="text-brand text-highlight">
+            <div className="col-md-5 col-sm-12 ml-5 mb-5 d-flex flex-column align-items-start justify-content-center">
+                <h4 className="text-brand text-highlight">
                     Let us handle your project, professionally.
-                </h1>
+                </h4>
 
                 <p className="text-brand">
                     With well written codes, we build amazing apps for all platforms, mobile and web apps in general.

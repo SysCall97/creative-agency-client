@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ShowServiceCard = (props) => {
-    const { name, description, img } = props.service;
+    const { name, description, image } = props.service;
     return (
         <div className="card mr-4 shadow mt-4 col-md-3" style={{borderRadius:"20px"}}>
             <Link to='/customer/order' style={{ textDecoration: 'none', color: 'black' }}>
             <div className="d-flex justify-content-center mt-4">
-                <img className="card-img-top img-fluid" style={{width:"20%"}} src={img} alt="" />
+                <img className="card-img-top img-fluid" style={{width:"20%"}} src={`data:image/png;base64,${props.service.image.img}`} alt="" />
             </div>
 
             <div className="card-body text-center">
