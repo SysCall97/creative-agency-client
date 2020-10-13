@@ -18,3 +18,17 @@ body{
 .text-highlight{
   font-weight: 800;
 }
+
+.carousel-indicators > li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.slides{
+  height: 350px;
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+  margin: 0 7px !important;
+}

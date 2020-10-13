@@ -2,6 +2,7 @@ import React from 'react';
 import Customer from '../Customer/Customer';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
+import WorkDemo from '../WorkDemo/WorkDemo';
 
 const Home = () => {
     document.title = "Home";
@@ -11,6 +12,7 @@ const Home = () => {
             <Header />
             <Customer />
             <Services />
+            <WorkDemo />
         </div>
     );
 };
