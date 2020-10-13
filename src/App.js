@@ -1,31 +1,48 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Order from './components/Customer/Order/Order';
 import Home from './components/Home/Home/Home';
+import Login from './components/Login/Login';
+import ProvateRoute from './components/ProvateRoute/ProvateRoute';
+
+export const userContext = React.createContext();
 
 function App() {
+  const [loggedinUser, setLoggedinUser] = React.useState({});
   return (
-    <BrowserRouter>
-      <Switch>
+    <userContext.Provider
+      value={
+        {
+          user: [loggedinUser, setLoggedinUser]
+        }
+      }>
+      <BrowserRouter>
+        <Switch>
 
-        <Route exact path="/">
-          <Home />
-        </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-        <Route path="/home">
-          <Home />
-        </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
 
-        <Route path="/login">
+          <ProvateRoute path="/customer/order">
+            <Order />
+          </ProvateRoute>
 
-        </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
 
-        <Route path="*">
+          <Route path="*">
 
-        </Route>
+          </Route>
 
-      </Switch>
-    </BrowserRouter>
+        </Switch>
+      </BrowserRouter>
+    </userContext.Provider>
   );
 }
 
