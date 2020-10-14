@@ -78,13 +78,13 @@ const Order = () => {
     }
 
     return (
-        <div className="d-flex vh-100" style={{ backgroundColor: "#E5E5E5" }}>
-            <div className="col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2  pt-4 bg-white h-100">
+        <div className="row d-flex min-vh-100 mw-100" style={{ backgroundColor: "#E5E5E5" }}>
+            <div className="col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2  pt-4 bg-white min-vh-100">
                 <Leftbar active='order' />
             </div>
             <div className="col-xs-11 col-sm-11 col-md-10 col-lg-10 col-xl-10 pl-0 pr-0">
                 <Topbar />
-                <div className="mt-3 ml-3">
+                <div className="m-3">
                     <form onSubmit={handleOnSubmit}>
                         <input className="w-75 mb-1 ml-1" style={{ height: "40px", border: "none", borderRadius: "5px", paddingLeft: "10px" }} type="text" name="name" defaultValue={user.displayName} onChange={handleOnChange} required /> <br />
 

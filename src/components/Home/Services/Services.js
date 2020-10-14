@@ -26,7 +26,9 @@ const Services = () => {
                 {
                     services.length > 0 ?
                         services.map(service => <ShowServiceCard service={service} key={service._id} />)
-                        : <h4 className="text-center">Loading...</h4>
+                        : <div class="spinner-border text-warning" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                 }
             </div>
         </div>

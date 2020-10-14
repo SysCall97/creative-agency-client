@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AddEvent from './components/Admin/AddEvent/AddEvent';
+import AddService from './components/Admin/AddService/AddService';
+import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import Order from './components/Customer/Order/Order';
 import Review from './components/Customer/Review/Review';
 import ServiceList from './components/Customer/ServiceList/ServiceList';
@@ -51,6 +53,14 @@ function App() {
 
           <ProvateRoute path="/customer/serviceList">
             <ServiceList />
+          </ProvateRoute>
+
+          <ProvateRoute path="/admin/makeAdmin">
+            <MakeAdmin />
+          </ProvateRoute>
+
+          <ProvateRoute path="/admin/addService">
+            <AddService />
           </ProvateRoute>
 
           <ProvateRoute path="/customer/review">

@@ -7,7 +7,7 @@ import ShowOrderCard from '../ShowOrderCard/ShowOrderCard';
 
 const ServiceList = () => {
     document.title = 'Service List';
-    const [orders, setOrders] = useState([]);
+    const [orders, setOrders] = useState(null);
     const loggedinUser = JSON.parse(sessionStorage.user);
     const { email } = loggedinUser;
 
@@ -34,7 +34,7 @@ const ServiceList = () => {
     }, []);
 
     return (
-        <div className="d-flex vh-auto" style={{backgroundColor:"#E5E5E5"}}>
+        <div className="row d-flex min-vh-100 mw-100" style={{backgroundColor:"#E5E5E5"}}>
             <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2  pt-4 bg-white min-vh-100">
                 <Leftbar active='serviceList' />
             </div>
@@ -43,6 +43,10 @@ const ServiceList = () => {
                 
                 <div className="row mt-3 ml-4 mw-100">
                     {
+                        orders === null ? 
+                        <div class="spinner-border text-warning" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>:
                         orders.map(order => <ShowOrderCard order={order} key={order._id} />)
                     }
                 </div>
