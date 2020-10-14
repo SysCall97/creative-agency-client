@@ -13,12 +13,17 @@ export const userContext = React.createContext();
 
 function App() {
   if(sessionStorage.getItem('user') === null) sessionStorage.setItem('user', JSON.stringify({}));
+  if(sessionStorage.getItem('services') === null) sessionStorage.setItem('services', JSON.stringify([]));
+
   const [loggedinUser, setLoggedinUser] = React.useState(JSON.parse(sessionStorage.user));
+  const [services, setServices] = React.useState(JSON.parse(sessionStorage.services));
+
   return (
     <userContext.Provider
       value={
         {
-          user: [loggedinUser, setLoggedinUser]
+          user: [loggedinUser, setLoggedinUser],
+          servicesContext: [services, setServices]
         }
       }>
       <BrowserRouter>
@@ -35,6 +40,10 @@ function App() {
           <Route path="/addEvent">
             <AddEvent />
           </Route>
+
+          <ProvateRoute path="/customer/order/:id">
+            <Order />
+          </ProvateRoute>
 
           <ProvateRoute path="/customer/order">
             <Order />

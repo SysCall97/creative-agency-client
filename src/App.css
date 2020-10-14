@@ -94,3 +94,12 @@ body{
 .custom-toggler.navbar-toggler {
   border-color: #111430;
 } 
+
+.btn-pending{
+  background-color: #FFE3E3;
+  color: #FF4545;
+  border: none;
+  cursor: none;
+  height: 70%;
+  width: 50%;
+}

@@ -10,7 +10,7 @@ const ShowClientFeedback = (props) => {
                 </div>
                 <div>
                     <h5 className="font-weight-bolder">{name}</h5>
-                    <h7 className="font-weight-bold">{designation}</h7>
+                    <h6 className="font-weight-bold">{designation}</h6>
                 </div>
             </div>
             <div>
