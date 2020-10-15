@@ -3,6 +3,16 @@ import { Link } from 'react-router-dom';
 import brand from '../../images/logos/logo.png';
 
 const Leftbar = (props) => {
+    const loggedinUser = JSON.parse(sessionStorage.user);
+
+    const admin = {
+        display: loggedinUser.isAdmin ? "block" : "none"
+    }
+
+    const user = {
+        display: loggedinUser.isAdmin ? "none" : "block"
+    }
+
     const activeText = {
         color: "#009444"
     }
@@ -17,7 +27,7 @@ const Leftbar = (props) => {
                     <img className="img-fluid" src={brand} style={{ width: "80%" }} />
                 </Link>
             </div>
-            <div style={{display:"block"}}>
+            <div style={user}>
                 <Link to="/customer/order"  style={{textDecoration:"none"}}>
                     <div className="d-flex justify-content-start align-items-center mb-4 mt-4">
                         <svg width="3em" height="1em" viewBox="0 0 16 16" className="bi bi-cart" fill={active === 'order' ? "#009444" : "#000"} xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +56,7 @@ const Leftbar = (props) => {
                 </Link>
             </div>
 
-            <div style={{display:"block"}}>
+            <div style={admin}>
                 <Link to="/admin/serviceList"  style={{textDecoration:"none"}}>
                     <div className="d-flex justify-content-start align-items-center mb-4 mt-4">
                         <svg width="3em" height="1em" viewBox="0 0 16 16" className="bi bi-hdd" fill={active === 'serviceList' ? "#009444" : "#000"} xmlns="http://www.w3.org/2000/svg">

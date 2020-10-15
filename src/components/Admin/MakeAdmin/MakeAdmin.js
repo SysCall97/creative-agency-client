@@ -1,11 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Leftbar from '../../Leftbar/Leftbar';
 import Topbar from '../../Topbar/Topbar';
 
 const MakeAdmin = () => {
     document.title = 'Make Admin';
     const [email, setEmail] = useState({});
+
+    const loggedinUser = JSON.parse(sessionStorage.user);
+    const history = useHistory();
+
+    if(!loggedinUser.isAdmin) history.push('/customer/serviceList');
 
     const handleOnChange = e => {
         const newEmail = {...email};
@@ -15,7 +21,7 @@ const MakeAdmin = () => {
     const handleOnSubmit = e => {
         
 
-        fetch('http://localhost:5000/makeAdmin', {
+        fetch('https://murmuring-journey-21904.herokuapp.com/makeAdmin', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(email)

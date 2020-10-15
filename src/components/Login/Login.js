@@ -20,7 +20,7 @@ const Login = () => {
             .then(user => {
                 if (user.isLoggedIn) {
                     const email = user.email;
-                    fetch('http://localhost:5000/isAdmin', {
+                    fetch('https://murmuring-journey-21904.herokuapp.com/isAdmin', {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify({email})

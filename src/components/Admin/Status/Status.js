@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Status = (props) => {
     const [status, setStatus] = useState(props.status);
@@ -7,7 +8,7 @@ const Status = (props) => {
     const updateProjectStatus = (newStatus) => {
         const order = { newStatus };
         const id = props.id;
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://murmuring-journey-21904.herokuapp.com/update/${id}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(order)

@@ -9,6 +9,10 @@ const Review = () => {
     document.title = 'Review';
     const history = useHistory();
     const user = JSON.parse(sessionStorage.user);
+
+    if(user.isAdmin) history.push('/admin/serviceList');
+
+
     const [review, setReview] = useState({
         name: user.displayName,
         img: user.photoURL
@@ -20,7 +24,7 @@ const Review = () => {
     }
     const handleOnSubmit = e => {
         console.log(review);
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://murmuring-journey-21904.herokuapp.com/addReview', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(review)

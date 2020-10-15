@@ -11,7 +11,7 @@ const Services = () => {
     const [services, setServices] = servicesContext;
 
     useEffect(() => {
-        fetch('http://localhost:5000/getAllServices')
+        fetch('https://murmuring-journey-21904.herokuapp.com/getAllServices')
             .then(res => res.json())
             .then(data => {
                 sessionStorage.setItem('services', JSON.stringify(data));

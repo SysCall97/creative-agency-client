@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Leftbar from '../../Leftbar/Leftbar';
 import Topbar from '../../Topbar/Topbar';
 import Status from '../Status/Status';
@@ -9,8 +10,13 @@ const TaskList = () => {
     document.title = 'Service List';
     const [orders, setOrders] = useState([]);
 
+    const loggedinUser = JSON.parse(sessionStorage.user);
+    const history = useHistory();
+
+    if(!loggedinUser.isAdmin) history.push('/customer/serviceList');
+
     useEffect(() => {
-        fetch('http://localhost:5000/getAllOrders')
+        fetch('https://murmuring-journey-21904.herokuapp.com/getAllOrders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, []);

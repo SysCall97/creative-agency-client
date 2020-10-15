@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Leftbar from '../../Leftbar/Leftbar';
 import Topbar from '../../Topbar/Topbar';
 import ShowOrderCard from '../ShowOrderCard/ShowOrderCard';
@@ -10,13 +11,16 @@ const ServiceList = () => {
     const [orders, setOrders] = useState(null);
     const loggedinUser = JSON.parse(sessionStorage.user);
     const { email } = loggedinUser;
+    const history = useHistory();
+
+    if(loggedinUser.isAdmin) history.push('/admin/serviceList');
 
     const services = JSON.parse(sessionStorage.services);
 
     // console.log(email);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getOrders', {
+        fetch('https://murmuring-journey-21904.herokuapp.com/getOrders', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email})

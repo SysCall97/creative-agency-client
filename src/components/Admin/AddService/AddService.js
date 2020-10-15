@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Leftbar from '../../Leftbar/Leftbar';
 import Topbar from '../../Topbar/Topbar';
 
@@ -7,6 +8,11 @@ const AddService = () => {
 
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
+
+    const loggedinUser = JSON.parse(sessionStorage.user);
+    const history = useHistory();
+
+    if(!loggedinUser.isAdmin) history.push('/customer/serviceList');
 
     const handleOnBlur = e => {
         const newInfo = {...info};
@@ -27,7 +33,7 @@ const AddService = () => {
 
         console.log(formData);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://murmuring-journey-21904.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

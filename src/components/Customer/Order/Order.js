@@ -7,7 +7,10 @@ import Topbar from '../../Topbar/Topbar';
 const Order = () => {
     document.title = 'Order';
     const { id } = useParams();
-    const history = useHistory()
+    const history = useHistory();
+
+    const loggedinUser = JSON.parse(sessionStorage.user);
+    if(loggedinUser.isAdmin) history.push('/admin/serviceList');
 
     let service = JSON.parse(sessionStorage.services).find(s => s._id === id);
     if (service === undefined) service = { name: "" };
@@ -62,7 +65,7 @@ const Order = () => {
             formData.append('price', orderDetails.price);
             formData.append('file', file);
 
-            fetch('http://localhost:5000/placeOrder', {
+            fetch('https://murmuring-journey-21904.herokuapp.com/placeOrder', {
                 method: 'POST',
                 body: formData
             })

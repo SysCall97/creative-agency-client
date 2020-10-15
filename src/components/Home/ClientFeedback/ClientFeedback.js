@@ -7,7 +7,7 @@ const ClientFeedback = () => {
     const [clients, setClients] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getReviews')
+        fetch('https://murmuring-journey-21904.herokuapp.com/getReviews')
             .then(res => res.json())
             .then(data => setClients(data));
     }, []);
