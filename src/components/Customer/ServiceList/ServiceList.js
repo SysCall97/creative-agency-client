@@ -14,8 +14,8 @@ const ServiceList = () => {
     const history = useHistory();
     if(loggedinUser.isAdmin) history.push('/admin/serviceList');
     
-    const [orders, setOrders] = useState([]);
-    
+    const [orders, setOrders] = useState(null);
+
     useEffect(() => {
         fetch('https://murmuring-journey-21904.herokuapp.com/getOrders', {
             method: 'POST',
