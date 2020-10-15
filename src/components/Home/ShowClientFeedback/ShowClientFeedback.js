@@ -6,7 +6,7 @@ const ShowClientFeedback = (props) => {
         <div className="mr-4 mt-4 p-4 col-md-3" style={{borderRadius:"5px", backgroundColor: "white", border:"1px solid #BFBFBF"}}>
             <div className="row">
                 <div className="col-3">
-                    <img src={img} alt="" className="img-fluid" />
+                    <img src={img} alt="" className="img-fluid" style={{borderRadius: "50%"}} />
                 </div>
                 <div>
                     <h5 className="font-weight-bolder">{name}</h5>

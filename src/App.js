@@ -4,6 +4,7 @@ import './App.css';
 import AddEvent from './components/Admin/AddEvent/AddEvent';
 import AddService from './components/Admin/AddService/AddService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
+import TaskList from './components/Admin/TaskList/TaskList';
 import Order from './components/Customer/Order/Order';
 import Review from './components/Customer/Review/Review';
 import ServiceList from './components/Customer/ServiceList/ServiceList';
@@ -61,6 +62,10 @@ function App() {
 
           <ProvateRoute path="/admin/addService">
             <AddService />
+          </ProvateRoute>
+
+          <ProvateRoute path="/admin/serviceList">
+            <TaskList />
           </ProvateRoute>
 
           <ProvateRoute path="/customer/review">

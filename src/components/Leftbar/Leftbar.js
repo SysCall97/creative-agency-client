@@ -46,8 +46,8 @@ const Leftbar = (props) => {
                 </Link>
             </div>
 
-            <div style={{display:"block"}}  style={{textDecoration:"none"}}>
-                <Link to="/admin/serviceList">
+            <div style={{display:"block"}}>
+                <Link to="/admin/serviceList"  style={{textDecoration:"none"}}>
                     <div className="d-flex justify-content-start align-items-center mb-4 mt-4">
                         <svg width="3em" height="1em" viewBox="0 0 16 16" className="bi bi-hdd" fill={active === 'serviceList' ? "#009444" : "#000"} xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" d="M14 9H2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1zM2 8a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H2z" />

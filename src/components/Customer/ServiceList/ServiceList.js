@@ -44,8 +44,8 @@ const ServiceList = () => {
                 <div className="row mt-3 ml-4 mw-100">
                     {
                         orders === null ? 
-                        <div class="spinner-border text-warning" role="status">
-                            <span class="sr-only">Loading...</span>
+                        <div className="spinner-border text-warning" role="status">
+                            <span className="sr-only">Loading...</span>
                         </div>:
                         orders.map(order => <ShowOrderCard order={order} key={order._id} />)
                     }

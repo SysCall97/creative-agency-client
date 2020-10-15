@@ -103,3 +103,8 @@ body{
   height: 70%;
   width: 50%;
 }
+
+.td{
+  width: 20%;
+  height: auto;
+}

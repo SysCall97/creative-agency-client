@@ -20,11 +20,8 @@ export const initializeSigninFramework = () => {
 export const googleSignIn = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
 
-  console.log("got it");
-
   return firebase.auth().signInWithPopup(provider)
     .then(res => {
-      console.log(res.user);
       const newUser = {
         displayName: res.user.displayName,
         email: res.user.email,
@@ -33,7 +30,6 @@ export const googleSignIn = () => {
         error: ""
       }
       
-      console.log(newUser);
       return newUser;
     })
     .catch(error => {

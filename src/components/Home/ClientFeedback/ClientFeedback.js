@@ -19,8 +19,8 @@ const ClientFeedback = () => {
                 {
                     clients.length > 0 ?
                         clients.map(client => <ShowClientFeedback client={client} key={client._id} />)
-                        : <div class="spinner-border text-warning" role="status">
-                            <span class="sr-only">Loading...</span>
+                        : <div className="spinner-border text-warning" role="status">
+                            <span className="sr-only">Loading...</span>
                         </div>
                 }
             </div>
