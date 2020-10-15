@@ -41,7 +41,7 @@ const Navbar = () => {
                             </li> : 
                             loggedinUser.isAdmin === true ?
                             <li className="nav-item mr-4">
-                                <Link className="nav-link text-brand" to="/admin/serviceList">Dashboard</Link>
+                                <Link className="nav-link text-brand" to="/admin/serviceList">Admin Dashboard</Link>
                             </li> :
                             <Link to="/login"></Link>
                     }
