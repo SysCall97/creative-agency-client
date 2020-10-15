@@ -52,7 +52,7 @@ const Order = () => {
 
     const handleOnSubmit = e => {
         if (orderDetails.serviceName === "") {
-            alert('Please insert service name');
+            alert('Please enter the exact service name');
         } else {
             const formData = new FormData();
             formData.append('clientName', orderDetails.name);

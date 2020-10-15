@@ -99,9 +99,30 @@ body{
   background-color: #FFE3E3;
   color: #FF4545;
   border: none;
-  cursor: none;
+  cursor: auto !important;
   height: 70%;
   width: 50%;
+  border-radius: 5px;
+}
+
+.btn-done{
+  background-color: #C6FFE0;
+  color: #009444;
+  border: none;
+  cursor: auto !important;
+  height: 70%;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.btn-onGoing{
+  background-color: #FAE4BA;
+  color: #FFBD3E;
+  border: none;
+  cursor: auto !important;
+  height: 70%;
+  width: 50%;
+  border-radius: 5px;
 }
 
 .td{

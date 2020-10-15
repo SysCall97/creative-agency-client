@@ -9,7 +9,9 @@ const ShowOrderCard = (props) => {
                 {
                     status === 'pending' ? 
                     <button className="btn-pending">Pending</button> :
-                    <button className="btn-done">Done</button>
+                    status === 'done' ? 
+                    <button className="btn-done">Done</button> :
+                    <button className="btn-onGoing">On Going</button>
                 }
             </div>
 
