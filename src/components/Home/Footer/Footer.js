@@ -15,12 +15,12 @@ const Footer = () => {
                 
             </div>
 
-            <div className="col-md-6 ml-auto mt-5 mb-5 pr-0">
+            <div className="col-md-6 ml-auto mt-5 mb-5 pr-0" id="contact">
                 <form>
                     <input className="w-75 mb-1 ml-1" style={{height:"40px", border:"none", borderRadius:"5px", paddingLeft: "10px"}} type="email" id="email" placeholder="Your email address" /> <br/>
                     <input className="w-75 m-1" style={{height:"40px", border:"none", borderRadius:"5px", paddingLeft: "10px"}} type="text" id="name" placeholder="Your name/company's name" /> <br/>
                     <textarea className="w-75 m-1" style={{border:"none", borderRadius:"5px", paddingLeft: "10px"}} id="message" rows="8" cols="50" placeholder="Your message" ></textarea> <br/>
-                    {/* <input className="w-75 m-1" style={{height:"190px", paddingTop:"0"}} type="text" id="message" placeholder="Your message" /> <br/> */}
+                    
                     <input type="submit" className="btn-brand" value="Send" />
                 </form>
             </div>

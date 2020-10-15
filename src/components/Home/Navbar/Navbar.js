@@ -26,13 +26,13 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item mr-4">
-                        <a className="nav-link text-brand" href="#">Home <span className="sr-only">(current)</span></a>
+                        <a className="nav-link text-brand" href="#services">Services <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item mr-4">
-                        <a className="nav-link text-brand" href="#">Out Portfolio</a>
+                        <a className="nav-link text-brand" href="#portfolio">Out Portfolio</a>
                     </li>
                     <li className="nav-item mr-4">
-                        <a className="nav-link text-brand" href="#">Contact us</a>
+                        <a className="nav-link text-brand" href="#contact">Contact us</a>
                     </li>
                     {
                         loggedinUser.isAdmin === false ?

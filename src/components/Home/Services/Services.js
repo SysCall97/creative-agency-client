@@ -20,7 +20,7 @@ const Services = () => {
     }, []);
 
     return (
-        <div className="mt-4 mb-4 pt-4 pb-4">
+        <div className="mt-4 mb-4 pt-4 pb-4" id="services">
             <h2 className="text-center font-weight-bolder pt-4 pb-4">Provide awesome <span style={{ color: "#7AB259" }}>services</span></h2>
             <div className="row d-flex justify-content-center mw-100 pt-4 pb-4">
                 {
