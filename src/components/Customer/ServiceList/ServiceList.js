@@ -8,17 +8,14 @@ import ShowOrderCard from '../ShowOrderCard/ShowOrderCard';
 
 const ServiceList = () => {
     document.title = 'Service List';
-    const [orders, setOrders] = useState(null);
     const loggedinUser = JSON.parse(sessionStorage.user);
     const { email } = loggedinUser;
+    
     const history = useHistory();
-
     if(loggedinUser.isAdmin) history.push('/admin/serviceList');
-
-    const services = JSON.parse(sessionStorage.services);
-
-    // console.log(email);
-
+    
+    const [orders, setOrders] = useState([]);
+    
     useEffect(() => {
         fetch('https://murmuring-journey-21904.herokuapp.com/getOrders', {
             method: 'POST',
@@ -27,13 +24,7 @@ const ServiceList = () => {
         })
         .then(res => res.json())
         .then(data => {
-            const orderInfo = data.map(service => {
-                const order = services.find(s => s.name === service.serviceName);
-                order['status'] = service.status;
-                return order;
-            })
-            // console.log(orderInfo);
-            setOrders(orderInfo);
+            setOrders(data);
         })
     }, []);
 

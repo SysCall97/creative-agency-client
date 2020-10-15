@@ -75,7 +75,6 @@ const Order = () => {
                 else alert("Order didn't placed. Try later");
             });
 
-            // console.log(formData);
         }
         e.preventDefault();
     }
