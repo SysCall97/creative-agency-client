@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import AddEvent from './components/Admin/AddEvent/AddEvent';
 import AddService from './components/Admin/AddService/AddService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import TaskList from './components/Admin/TaskList/TaskList';
@@ -38,10 +37,6 @@ function App() {
 
           <Route path="/home">
             <Home />
-          </Route>
-
-          <Route path="/addEvent">
-            <AddEvent />
           </Route>
 
           <ProvateRoute path="/customer/order/:id">
