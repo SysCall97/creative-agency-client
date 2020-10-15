@@ -17,13 +17,23 @@ const Login = () => {
 
     const handleGoogleSignIn = () => {
         googleSignIn()
-        .then(user => {
-            if (user.isLoggedIn) {
-                sessionStorage.setItem('user', JSON.stringify(user));
-                setLoggedinUser(user);
-                history.push(from);
-            }
-        });
+            .then(user => {
+                if (user.isLoggedIn) {
+                    const email = user.email;
+                    fetch('http://localhost:5000/isAdmin', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({email})
+                    })
+                        .then(res => res.json())
+                        .then(isAdmin => {
+                            user['isAdmin'] = isAdmin;
+                            sessionStorage.setItem('user', JSON.stringify(user));
+                            setLoggedinUser(user);
+                            history.push(from);
+                        })
+                }
+            });
     }
     return (
         <div className="formContainer">

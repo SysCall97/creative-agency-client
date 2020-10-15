@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { userContext } from '../../../App';
 import brand from '../../../images/logos/logo.png';
-import { signOut } from '../../Login/loginManager';
+import { initializeSigninFramework, signOut } from '../../Login/loginManager';
 
 const Navbar = () => {
     const { user } = useContext(userContext);
     const [loggedinUser, setLoggedinUser] = user;
 
     const handleLogOut = () => {
+        initializeSigninFramework();
         setLoggedinUser({});
         signOut();
         sessionStorage.setItem('user', JSON.stringify({}));
@@ -31,19 +32,27 @@ const Navbar = () => {
                         <a className="nav-link text-brand" href="#">Out Portfolio</a>
                     </li>
                     <li className="nav-item mr-4">
-                        <a className="nav-link text-brand" href="#">Our Team</a>
-                    </li>
-                    <li className="nav-item mr-4">
                         <a className="nav-link text-brand" href="#">Contact us</a>
                     </li>
+                    {
+                        loggedinUser.isAdmin === false ?
+                            <li className="nav-item mr-4">
+                                <Link className="nav-link text-brand" to="/customer/serviceList">Dashboard</Link>
+                            </li> : 
+                            loggedinUser.isAdmin === true ?
+                            <li className="nav-item mr-4">
+                                <Link className="nav-link text-brand" to="/admin/serviceList">Dashboard</Link>
+                            </li> :
+                            <Link to="/login"></Link>
+                    }
                     <li className="nav-item mr-4">
                         {
-                        loggedinUser.isLoggedIn === true ?
-                        <button className="btn-brand" onClick={handleLogOut}>Log Out</button> :
-                            <Link to="/login">
-                                <button className="btn-brand">Log In</button>
-                            </Link>
-                            
+                            loggedinUser.isLoggedIn === true ?
+                                <button className="btn-brand" onClick={handleLogOut}>Log Out</button> :
+                                <Link to="/login">
+                                    <button className="btn-brand">Log In</button>
+                                </Link>
+
                         }
                     </li>
                 </ul>

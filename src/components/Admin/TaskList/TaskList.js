@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Leftbar from '../../Leftbar/Leftbar';
 import Topbar from '../../Topbar/Topbar';
-import Status from './Status/Status';
+import Status from '../Status/Status';
 
 const TaskList = () => {
     document.title = 'Service List';
