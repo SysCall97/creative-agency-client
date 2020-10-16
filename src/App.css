@@ -113,7 +113,7 @@ body{
 .btn-done, .btn-onGoing, .btn-pending{
   border: none;
   cursor: auto !important;
-  height: 70%;
+  height: 40px;
   width: 50%;
   border-radius: 5px;
 }
