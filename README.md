@@ -24,3 +24,8 @@
     - Can add a new service.
     - Can make a new admin by adding an email.
 
+### Screenshots
+**HomePage**
+![HomePage](https://i.ibb.co/PNBRmwK/landpage.png, "Homepage")
+
+**Resume:** [https://drive.google.com/file/d/12oxT5yjx6ztnUAtrRBlzxjm2JyvlzU-c/view?]
