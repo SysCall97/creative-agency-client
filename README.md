@@ -6,6 +6,7 @@
 - JavaScript
 - React js
 - React router dom
+- Bootstrap
 - Node Js (for back-end)
 - Firebase
 - HTML
