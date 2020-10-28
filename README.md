@@ -26,7 +26,12 @@
 
 ### Screenshots
 **HomePage**
-<!-- ![HomePage](https://i.ibb.co/PNBRmwK/landpage.png, "Homepage") -->
-<img src="https://i.ibb.co/PNBRmwK/landpage.png" width="400">
+<img src="https://i.ibb.co/PNBRmwK/landpage.png" width="300">
+
+**Log in**
+<img src="https://i.ibb.co/Js4kSXL/login.png" width="300">
+
+**Order placement**
+<img src="https://i.ibb.co/6R6613y/user-order-dashboard.png" width="300">
 
 **Resume:** [https://drive.google.com/file/d/12oxT5yjx6ztnUAtrRBlzxjm2JyvlzU-c/view?]
