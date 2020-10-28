@@ -20,7 +20,7 @@
 2. Admin
     - Can log in with Gmail.
     - Can see the order list.
-    - Can change the current status of an order which is dynamically shown in the customer's order page.
+    - Can change the current status of an order which is dynamically shown on the customer's order page.
     - Can add a new service.
     - Can make a new admin by adding an email.
 
