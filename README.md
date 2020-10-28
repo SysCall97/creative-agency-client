@@ -12,11 +12,13 @@
 
 ### Key features:
 1. User
-    - A user can place order for a service that the agency provides.
+    - Can login with gmail.
+    - Can place order for a service that the agency provides.
     - See the current status of the given order.
     - Can give a review that is dynamically shown on the homepage.
 2. Admin
-    - An admin can see the order list.
+    - Can login with gmail.
+    - Can see the order list.
     - Can change the current status of an order which is dynamically shown in the customer's order page.
     - Can add a new service.
     - Can make a new admin by adding an email.
