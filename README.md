@@ -8,7 +8,7 @@
 - React router dom
 - Bootstrap
 - Node Js (for back-end)
-- Firebase
+- Firebase authentication
 - HTML
 - CSS
 
