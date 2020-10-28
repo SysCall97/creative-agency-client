@@ -6,6 +6,7 @@
 - JavaScript
 - React js
 - React router dom
+- Node Js (for back-end)
 - Firebase
 - HTML
 - CSS
@@ -22,3 +23,4 @@
     - Can change the current status of an order which is dynamically shown in the customer's order page.
     - Can add a new service.
     - Can make a new admin by adding an email.
+
