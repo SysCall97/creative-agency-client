@@ -27,6 +27,6 @@
 ### Screenshots
 **HomePage**
 <!-- ![HomePage](https://i.ibb.co/PNBRmwK/landpage.png, "Homepage") -->
-<img src="https://i.ibb.co/PNBRmwK/landpage.png" width="200" height="400">
+<img src="https://i.ibb.co/PNBRmwK/landpage.png" width="400">
 
 **Resume:** [https://drive.google.com/file/d/12oxT5yjx6ztnUAtrRBlzxjm2JyvlzU-c/view?]
